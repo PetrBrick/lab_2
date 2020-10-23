@@ -1,0 +1,131 @@
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	//1
+	int x, y, z;
+	cin >> x >> y >> z;
+
+	if (x % 2) { if (y % 2) cout << "condition is false \n"; }
+	else cout << "xondition is true  \n";
+
+	if (x - 20 < 0) { cout << "condition is true \n"; }
+	else {
+		if (y - 20 < 0) cout << "xondition is true  \n";
+		else  cout << "condition is false \n";
+	}
+
+	if (x!=0) { cout << "condition is false \n"; }
+	else {
+		if (y!=0)cout << "xondition is false  \n";
+		else  cout << "condition is true \n";
+	}
+
+	if (x < 0) {
+		if (y < 0) { if (z < 0)  cout << "condition is true \n";  }
+	}
+	else { cout << "xondition is false  \n"; }
+
+	if (x % 5 == 0 && y % 5 != 0 && z % 5 != 0) cout << "condition is true \n"; 
+	if (x % 5 != 0 && y % 5 == 0 && z % 5 != 0) cout << "condition is true \n";
+	if (x % 5 != 0 && y % 5 != 0 && z % 5 == 0) cout << "condition is true \n"; 
+	else { cout << "condition is false \n";}
+
+	if (x >100) cout << "condition is true \n";
+	else {
+		if (y > 100) cout << "condition is true \n";
+		else {
+			if (z > 100) cout << "condition is true \n";
+			else { cout << "condition is false \n"; }
+		}
+	}
+	//2
+	int a, b, c, d;
+
+	cin >> a >> b >> c >> d;
+	pair<byte, byte> posa(a, b), posb(c, d);
+
+	if (a == c) cout << "1 Alarm\n";
+	else if (b == d) cout << "1 Alarm\n";
+
+	if (abs(a - b) == abs(c - d)) cout << "2 Alarm\n";
+	else if (abs(a - c) == abs(b - d)) cout << "2 Alarm\n";
+
+	if (abs(a - c) == 1) cout << "3 Alarm\n";
+	else if (abs(b - d) == 1) cout << "3 Alarm\n";
+
+	if (a == c) cout << "4 Alarm\n";
+	else {
+		if (b == d) cout << "4 Alarm\n";
+		else {
+			if (abs(a - b) == abs(c - d)) cout << "4 Alarm\n";
+			else if (abs(a - c) == abs(b - d)) cout << "4 Alarm\n";
+		}
+	}
+
+	if (a == c && b - c <= 2) cout << "5.1 doshel\n";
+
+	if (a == c + 1 || a == c - 1) if (abs(a - c) == 1 && abs(b - d) == 1) cout << "5.2 doshel\n";
+
+	//3
+	int i, n, g, a, b;
+	for (i = 1; i < 10; i++) {
+		a = 7 * i;
+		cout << i << " x 7 = " << a << endl;
+	}
+	cout << endl;
+
+	cin >> n;
+	cout << endl;
+	for (i = 1; i < 10; i++) {
+		a = n * i;
+		cout << i << " x " << n << " = " << a << endl;
+	}
+	cout << endl;
+
+	//4
+
+	for (i = 8; i < 16; i++) {
+		for (n = 8; n < 16; n++) {
+			a = n * i;
+			cout << i << " x " << n << " = " << a << endl;
+		}
+	}
+
+	cout << endl;
+
+	cin >> a;
+	cout << endl;
+	for (i = a; i < 16; i++) {
+		for (n = a; n < 16; n++) {
+			g = n * i;
+			cout << i << " x " << n << " = " << g << endl;
+		}
+	}
+
+	cout << endl;
+
+	cin >> a;
+	cout << endl;
+	for (i = a; i < 16; i++) {
+		for (n = a; n < 16; n++) {
+			g = n * i;
+			cout << i << " x " << n << " = " << g << endl;
+		}
+	}
+
+
+	cout << endl;
+
+	int l;
+	cin >> a >> l;
+	cout << endl;
+	for (i = a; i < l; i++) {
+		for (n = a; n < l; n++) {
+			g = n * i;
+			cout << i << " x " << n << " = " << g << endl;
+		}
+	}
+}
+
